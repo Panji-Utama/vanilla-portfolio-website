@@ -164,6 +164,10 @@ article {
   z-index: 1;
 }
 
+.avatar-box img {
+  border-radius: 10px;
+}
+
 .separator {
   width: 100%;
   height: 1px;
@@ -313,7 +317,7 @@ main {
 
 .sidebar {
   margin-bottom: 15px;
-  max-height: 112px;
+  max-height: 185px;
   overflow: hidden;
   transition: var(--transition-2);
 }
@@ -884,6 +888,11 @@ main {
   line-height: 1.6;
 }
 
+.gpa {
+  font-style: italic;
+  color: hsl(45, 95%, 75%);
+}
+
 /**
  * skills 
  */
@@ -1321,7 +1330,8 @@ textarea.form-input::-webkit-resizer {
   cursor: pointer;
   outline-offset: 4px;
   transition: filter 250ms;
-  height: 60px;
+  height: 70px;
+  font-weight: bolder;
 }
 .shadow {
   position: absolute;
@@ -1340,7 +1350,7 @@ textarea.form-input::-webkit-resizer {
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
+  height: 107%;
   border-radius: 12px;
   background: linear-gradient(
     to left,
@@ -1446,6 +1456,11 @@ textarea.form-input::-webkit-resizer {
  */
 
 @media (min-width: 450px) {
+  /* Sidebar Profile Pic */
+  /* .avatar-box img {
+    border-radius: 12px;
+  } */
+
   /**
    * client
    */
@@ -1464,7 +1479,7 @@ textarea.form-input::-webkit-resizer {
   }
 
   .avatar-box img {
-    border-radius: 30px;
+    border-radius: 14px;
   }
 }
 
@@ -1533,7 +1548,7 @@ textarea.form-input::-webkit-resizer {
    */
 
   .sidebar {
-    max-height: 180px;
+    max-height: 220px;
     margin-bottom: 30px;
   }
 

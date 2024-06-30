@@ -28,7 +28,10 @@ jobs:
         echo "|1|V8ZAq2g7vaHD2AMTCdXZw7wX8a0=|YNOvuroL+8y0qHt8YmyKcqHMDb8= ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBKnLnBklcGs6IAxpVekf1+TgKPCjb27Bu1s7wK9TMHiWie2Js/pp6uKXAuhG9mK1YqVmaCrDHXaKqQULyda+Etg=" >> ~/.ssh/known_hosts
         echo "|1|kzEnraao/vimqvIiofEfhaPEk4A=|jbGiNBqcfxFAuVijXZMKfCUmr5w= ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIFQPuaTc6jmy1yWT76me5c9X/mGapoU1n6vlqiOHGJeX" >> ~/.ssh/known_hosts
 
-    - name: Copy files via SSH
+    - name: Copy Docker Compose file via SSH
+      run: scp docker-compose.yml root@213.210.21.113:/var/www/vanilla-portfolio-website/docker-compose.yml
+
+    - name: Copy application files via SSH
       run: scp -r ./* root@213.210.21.113:/var/www/vanilla-portfolio-website
 
     - name: SSH and deploy

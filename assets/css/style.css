@@ -844,6 +844,29 @@ main {
   position: relative;
 }
 
+.timeline-item-title {
+  display: inline-block; /* Display inline block */
+  position: relative; /* Set position relative */
+}
+
+.timeline-item-title:after {
+  content: ''; /* Add content after the element */
+  position: absolute; /* Position absolute for pseudo-element */
+  width: 100%; /* Full width */
+  transform: scaleX(0); /* Initial scale of 0 for underline effect */
+  height: 2px; /* Height of the underline */
+  bottom: 0; /* Align to bottom */
+  left: 0; /* Align to left */
+  background-color: var(--orange-yellow-crayola); /* Background color of the underline */
+  transform-origin: bottom right; /* Set transform origin */
+  transition: transform 0.25s ease-out; /* Transition effect for the underline */
+}
+
+.timeline-item-title:hover:after {
+  transform: scaleX(1); /* Scale the underline on hover */
+  transform-origin: bottom left; /* Set transform origin */
+}
+
 .timeline-item:not(:last-child) {
   margin-bottom: 20px;
 }
